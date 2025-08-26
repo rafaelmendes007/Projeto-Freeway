@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0yick283iga5"]
+
+[ext_resource type="PackedScene" uid="uid://cal7i6ovtnsbr" path="res://Cenas/player.tscn" id="1_74bqr"]
+[ext_resource type="Texture2D" uid="uid://btiunlyn0kxum" path="res://Material Freeway/wallpaperfreeway.png" id="1_ruij7"]
+[ext_resource type="Script" uid="uid://bmohcvvpug0wf" path="res://Cenas/main.gd" id="1_x6di6"]
+[ext_resource type="PackedScene" uid="uid://ckulvo1iu5ah2" path="res://Cenas/linha_chegada.tscn" id="2_ruij7"]
+[ext_resource type="AudioStream" uid="uid://b083h2k6laowv" path="res://Material Freeway/sons/tema.wav" id="4_n00j1"]
+[ext_resource type="AudioStream" uid="uid://bqpilcn6at1qv" path="res://Material Freeway/sons/ponto.wav" id="5_x6di6"]
+[ext_resource type="AudioStream" uid="uid://b4iq7yqf8magx" path="res://Material Freeway/sons/ganhou.wav" id="6_btbr3"]
+[ext_resource type="PackedScene" uid="uid://dr1idsrfxlhct" path="res://Cenas/hud.tscn" id="7_jjrtw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_x6di6")
+
+[node name="Pista" type="Sprite2D" parent="."]
+texture = ExtResource("1_ruij7")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("1_74bqr")]
+
+[node name="LinhaChegada" parent="." instance=ExtResource("2_ruij7")]
+position = Vector2(640, 64)
+
+[node name="TimerCarrosRapidos" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="TimerCarrosLentos" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AudioTema" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_n00j1")
+
+[node name="AudioPonto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x6di6")
+
+[node name="AudioVitoria" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_btbr3")
+
+[node name="HUD" parent="." instance=ExtResource("7_jjrtw")]
+
+[connection signal="pontua" from="Player" to="." method="_on_player_pontua"]
+[connection signal="timeout" from="TimerCarrosRapidos" to="." method="_on_timer_carros_rapidos_timeout"]
+[connection signal="timeout" from="TimerCarrosLentos" to="." method="_on_timer_carros_lentos_timeout"]

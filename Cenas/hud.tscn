@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr1idsrfxlhct"]
+
+[ext_resource type="Script" uid="uid://iuf5yd3rhajg" path="res://Cenas/hud.gd" id="1_1pfdj"]
+[ext_resource type="FontFile" uid="uid://c8njppxxo0pq5" path="res://Material Freeway/PressStart2P-Regular.ttf" id="1_kgovw"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_1pfdj")
+
+[node name="Placar" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_kgovw")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mensagem" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -46.5
+offset_right = 221.5
+offset_bottom = 53.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_kgovw")
+theme_override_font_sizes/font_size = 32
+text = "Parabéns, você ganhou!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 420.0
+offset_right = 800.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("1_kgovw")
+theme_override_font_sizes/font_size = 28
+text = "Reiniciar"
+icon_alignment = 1
+
+[connection signal="reinicia" from="." to="." method="_on_reinicia"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
