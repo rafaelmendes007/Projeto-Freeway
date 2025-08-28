@@ -49,5 +49,4 @@ theme_override_font_sizes/font_size = 28
 text = "Reiniciar"
 icon_alignment = 1
 
-[connection signal="reinicia" from="." to="." method="_on_reinicia"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

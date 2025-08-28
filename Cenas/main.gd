@@ -37,12 +37,13 @@ func _on_player_pontua() -> void:
 		$HUD/Placar.text = str(score);
 		$AudioPonto.play();
 		$Player.position = $Player.posicao_inicial;
-	if score == 10:
+	if score == 1:
 		$HUD/Mensagem.show();
 		$HUD/Button.show();
 		$TimerCarrosRapidos.stop();
 		$TimerCarrosLentos.stop();
 		$AudioVitoria.play();
 		$Player.speed = 0;
-func _on_reinicia() -> void:
-	get_tree().reload_current_scene();
+
+func _on_hud_reinicia() -> void:
+	get_tree().reload_current_scene()

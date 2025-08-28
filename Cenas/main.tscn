@@ -43,3 +43,4 @@ stream = ExtResource("6_btbr3")
 [connection signal="pontua" from="Player" to="." method="_on_player_pontua"]
 [connection signal="timeout" from="TimerCarrosRapidos" to="." method="_on_timer_carros_rapidos_timeout"]
 [connection signal="timeout" from="TimerCarrosLentos" to="." method="_on_timer_carros_lentos_timeout"]
+[connection signal="reinicia" from="HUD" to="." method="_on_hud_reinicia"]
