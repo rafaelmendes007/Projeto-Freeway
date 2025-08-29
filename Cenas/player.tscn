@@ -49,8 +49,7 @@ script = ExtResource("1_e2nbm")
 [node name="Animacao" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_u1c27")
-animation = &"cima"
-frame_progress = 0.665257
+animation = &"baixo"
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

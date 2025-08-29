@@ -18,6 +18,9 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_74bqr")]
 
+[node name="Player2" parent="." instance=ExtResource("1_74bqr")]
+player_id = 2
+
 [node name="LinhaChegada" parent="." instance=ExtResource("2_ruij7")]
 position = Vector2(640, 64)
 
@@ -41,6 +44,7 @@ stream = ExtResource("6_btbr3")
 [node name="HUD" parent="." instance=ExtResource("7_jjrtw")]
 
 [connection signal="pontua" from="Player" to="." method="_on_player_pontua"]
+[connection signal="pontua2" from="Player2" to="." method="_on_player_2_pontua_2"]
 [connection signal="timeout" from="TimerCarrosRapidos" to="." method="_on_timer_carros_rapidos_timeout"]
 [connection signal="timeout" from="TimerCarrosLentos" to="." method="_on_timer_carros_lentos_timeout"]
 [connection signal="reinicia" from="HUD" to="." method="_on_hud_reinicia"]
