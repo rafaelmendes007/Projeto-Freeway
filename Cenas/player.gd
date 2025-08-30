@@ -7,8 +7,8 @@ signal pontua2;
 @export var player_id: int = 1;
 var speed: float = 300.0;
 var screen_size: Vector2;
-var posicao_inicial_p1: Vector2 = Vector2(840, 685);
-var posicao_inicial_p2: Vector2 = Vector2(440, 685);
+var posicao_inicial_p1: Vector2 = Vector2(960, 685);
+var posicao_inicial_p2: Vector2 = Vector2(320, 685);
 
 # função para fazer o player retornar à posição inicial
 func _ready():
