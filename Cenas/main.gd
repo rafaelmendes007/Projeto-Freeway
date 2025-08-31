@@ -50,14 +50,13 @@ func _on_timer_carros_rapidos_timeout() -> void:
 	if direcao == 1:
 		pista_y = pistas_rapidas_esq_dir[randi_range(0, pistas_rapidas_esq_dir.size() - 1)];
 		start_x = -10;
+		
 	else:
 		pista_y = pistas_rapidas_dir_esq[randi_range(0, pistas_rapidas_dir_esq.size() - 1)];
 		start_x = 1290;
 		velocidade *= -1;
 	
-	carro.position = Vector2(start_x, pista_y);
-	carro.set_linear_velocity(Vector2(velocidade, 0));
-	carro.set_linear_damp(0.0);
+	carro.setup(Vector2(velocidade, 0), Vector2(start_x, pista_y))
 
 
 func _on_timer_carros_lentos_timeout() -> void:
@@ -84,9 +83,7 @@ func _on_timer_carros_lentos_timeout() -> void:
 		start_x = 1290;
 		velocidade *= -1;
 	
-	carro.position = Vector2(start_x, pista_y);
-	carro.set_linear_velocity(Vector2(velocidade, 0));
-	carro.set_linear_damp(0.0);
+	carro.setup(Vector2(velocidade, 0), Vector2(start_x, pista_y))
 
 # CRIAR UMA MENSAGEM PRA CADA PLAYER
 func _on_player_pontua() -> void:

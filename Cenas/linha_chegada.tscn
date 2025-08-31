@@ -8,6 +8,7 @@ size = Vector2(1280, 17)
 [node name="LinhaChegada" type="StaticBody2D"]
 
 [node name="Sprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.572549, 0.00392157, 1)
 texture = ExtResource("1_xd2l1")
 
 [node name="Colisao" type="CollisionShape2D" parent="."]

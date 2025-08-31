@@ -5,17 +5,20 @@ signal pontua2;
 
 # variável para identificar o jogador
 @export var player_id: int = 1;
-var speed: float = 300.0;
+var speed: float = 150.0;
 var screen_size: Vector2;
 var posicao_inicial_p1: Vector2 = Vector2(960, 685);
 var posicao_inicial_p2: Vector2 = Vector2(320, 685);
+@onready var animacao = $Animacao
 
 # função para fazer o player retornar à posição inicial
 func _ready():
 	screen_size = get_viewport_rect().size;
 	if player_id == 1:
+		$Animacao.play("cima1");
 		position = posicao_inicial_p1;
 	if player_id == 2:
+		$Animacao.play("cima2");
 		position = posicao_inicial_p2;
 
 func _process(delta):
@@ -48,13 +51,25 @@ func _process(delta):
 	position += velocity * delta;
 	position.y = clamp(position.y, 0.0, screen_size.y);
 
-	if velocity.y > 0:
-		$Animacao.play("baixo");
-	elif velocity.y < 0:
-		$Animacao.play("cima");
-	else:
-		$Animacao.stop();
-	
+	if player_id == 1:
+		if velocity.y > 0:
+			$Animacao.play("baixo1");
+			animacao.position.y = 3.0
+		elif velocity.y < 0:
+			$Animacao.play("cima1");
+			animacao.position.y = -3.0
+		else:
+			$Animacao.stop();
+			
+	if player_id == 2:
+		if velocity.y > 0:
+			$Animacao.play("baixo2");
+			animacao.position.y = 3.0
+		elif velocity.y < 0:
+			$Animacao.play("cima2");
+			animacao.position.y = -3.0
+		else:
+			$Animacao.stop();
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "LinhaChegada":

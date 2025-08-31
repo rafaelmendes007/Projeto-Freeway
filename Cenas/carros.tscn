@@ -1,155 +1,132 @@
-[gd_scene load_steps=18 format=3 uid="uid://bu3oo3t1tmidc"]
+[gd_scene load_steps=20 format=3 uid="uid://bu3oo3t1tmidc"]
 
 [ext_resource type="Script" uid="uid://clpdg2s8cawjb" path="res://Cenas/carros.gd" id="1_pvg5f"]
-[ext_resource type="Texture2D" uid="uid://ibtgmxqtp6pb" path="res://Material Freeway/carros/coches (1).png" id="1_seikp"]
-[ext_resource type="Texture2D" uid="uid://buq1egluf00xv" path="res://Material Freeway/carros/coches (2).png" id="2_pvg5f"]
-[ext_resource type="Texture2D" uid="uid://c3spxgukjkhs5" path="res://Material Freeway/carros/coches (3).png" id="3_qtsem"]
-[ext_resource type="Texture2D" uid="uid://dd8pr6tsbs5cv" path="res://Material Freeway/carros/coches (4).png" id="4_eyynr"]
-[ext_resource type="Texture2D" uid="uid://cybkya8bi15j3" path="res://Material Freeway/carros/coches (5).png" id="5_aqtas"]
-[ext_resource type="Texture2D" uid="uid://b48aaimmm3xph" path="res://Material Freeway/carros/coches (6).png" id="6_dhytv"]
-[ext_resource type="Texture2D" uid="uid://b0wun4tqqa1io" path="res://Material Freeway/carros/coches (7).png" id="7_7g5ho"]
-[ext_resource type="Texture2D" uid="uid://crx4yq64rtaa3" path="res://Material Freeway/carros/coches (8).png" id="8_6jem2"]
-[ext_resource type="Texture2D" uid="uid://cbkgwpq545rll" path="res://Material Freeway/carros/coches (9).png" id="9_rntr6"]
-[ext_resource type="Texture2D" uid="uid://dherfcbw1vmbx" path="res://Material Freeway/carros/coches (10).png" id="10_a4klt"]
-[ext_resource type="Texture2D" uid="uid://bkr20sv71x5ac" path="res://Material Freeway/carros/coches (11).png" id="11_kyb1r"]
-[ext_resource type="Texture2D" uid="uid://ss4j5hsmhlfm" path="res://Material Freeway/carros/coches (12).png" id="12_xp268"]
-[ext_resource type="Texture2D" uid="uid://d3h263yqsg28y" path="res://Material Freeway/carros/coches (13).png" id="13_7jppq"]
-[ext_resource type="Texture2D" uid="uid://cs6o3q0mkt2r" path="res://Material Freeway/carros/coches (14).png" id="14_4rq0c"]
+[ext_resource type="Texture2D" uid="uid://cfyibuv2pupio" path="res://MyMaterialFreway/obstaculos/cobra00.png" id="2_a4klt"]
+[ext_resource type="Texture2D" uid="uid://cdadcsuo0jgk4" path="res://MyMaterialFreway/obstaculos/cobra01.png" id="3_kyb1r"]
+[ext_resource type="Texture2D" uid="uid://b8r008ushucw2" path="res://MyMaterialFreway/obstaculos/cobra10.png" id="5_xp268"]
+[ext_resource type="Texture2D" uid="uid://cre0rc5bxxjnt" path="res://MyMaterialFreway/obstaculos/cobra11.png" id="6_7jppq"]
+[ext_resource type="Texture2D" uid="uid://cbtddquwjr3ii" path="res://MyMaterialFreway/obstaculos/cobra30.png" id="11_qppbq"]
+[ext_resource type="Texture2D" uid="uid://dyejc1w6njg6g" path="res://MyMaterialFreway/obstaculos/cobra31.png" id="12_pqcm0"]
+[ext_resource type="Texture2D" uid="uid://bbwgdsku4cl8n" path="res://MyMaterialFreway/obstaculos/cobra40.png" id="14_4lyq7"]
+[ext_resource type="Texture2D" uid="uid://cxxgcxxhmjlh3" path="res://MyMaterialFreway/obstaculos/tumbleweed00.png" id="14_eyynr"]
+[ext_resource type="Texture2D" uid="uid://tpj1jhb6c2ns" path="res://MyMaterialFreway/obstaculos/cobra41.png" id="15_rku7p"]
+[ext_resource type="Texture2D" uid="uid://d4ibhig2umvug" path="res://MyMaterialFreway/obstaculos/tumbleweed10.png" id="16_aqtas"]
+[ext_resource type="Texture2D" uid="uid://1lxr1m0iwooh" path="res://MyMaterialFreway/obstaculos/tumbleweed11.png" id="17_dhytv"]
+[ext_resource type="Texture2D" uid="uid://bd5i8084de0n" path="res://MyMaterialFreway/obstaculos/cobra50.png" id="17_e7can"]
+[ext_resource type="Texture2D" uid="uid://capeagpijtvid" path="res://MyMaterialFreway/obstaculos/cobra51.png" id="18_ojwex"]
+[ext_resource type="Texture2D" uid="uid://ooxn2xtl0nhl" path="res://MyMaterialFreway/obstaculos/cobra60.png" id="20_e5krh"]
+[ext_resource type="Texture2D" uid="uid://cg8jgv1s2rrc7" path="res://MyMaterialFreway/obstaculos/cobra61.png" id="21_gagoa"]
+[ext_resource type="Texture2D" uid="uid://cu0ap1mmwgock" path="res://MyMaterialFreway/obstaculos/tumbleweed01.png" id="24_kyb1r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc6av"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_seikp")
+"duration": 2.0,
+"texture": ExtResource("2_a4klt")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_kyb1r")
 }],
 "loop": true,
-"name": &"carro01",
+"name": &"cobra00",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("5_xp268")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7jppq")
+}],
+"loop": true,
+"name": &"cobra01",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("11_qppbq")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_pqcm0")
+}],
+"loop": true,
+"name": &"cobra02",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("14_4lyq7")
+}, {
+"duration": 2.0,
+"texture": ExtResource("15_rku7p")
+}],
+"loop": true,
+"name": &"cobra03",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("17_e7can")
+}, {
+"duration": 2.0,
+"texture": ExtResource("18_ojwex")
+}],
+"loop": true,
+"name": &"cobra04",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("20_e5krh")
+}, {
+"duration": 2.0,
+"texture": ExtResource("21_gagoa")
+}],
+"loop": true,
+"name": &"cobra05",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_pvg5f")
+"texture": ExtResource("14_eyynr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kyb1r")
 }],
 "loop": true,
-"name": &"carro02",
+"name": &"tumbleweed1",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_qtsem")
-}],
-"loop": true,
-"name": &"carro03",
-"speed": 5.0
+"texture": ExtResource("17_dhytv")
 }, {
-"frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_eyynr")
+"texture": ExtResource("16_aqtas")
 }],
 "loop": true,
-"name": &"carro04",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_aqtas")
-}],
-"loop": true,
-"name": &"carro05",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_dhytv")
-}],
-"loop": true,
-"name": &"carro06",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_7g5ho")
-}],
-"loop": true,
-"name": &"carro07",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_6jem2")
-}],
-"loop": true,
-"name": &"carro08",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_rntr6")
-}],
-"loop": true,
-"name": &"carro09",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_a4klt")
-}],
-"loop": true,
-"name": &"carro10",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_kyb1r")
-}],
-"loop": true,
-"name": &"carro11",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_xp268")
-}],
-"loop": true,
-"name": &"carro12",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_7jppq")
-}],
-"loop": true,
-"name": &"carro13",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_4rq0c")
-}],
-"loop": true,
-"name": &"carro14",
+"name": &"tumbleweed2",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seikp"]
-size = Vector2(48, 35)
+size = Vector2(71, 34)
 
 [node name="Carros" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_pvg5f")
 
 [node name="Animacao" type="AnimatedSprite2D" parent="."]
-rotation = 1.5708
+position = Vector2(1, 0)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_cc6av")
-animation = &"carro08"
+animation = &"cobra01"
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_seikp")
 
 [node name="Notificador" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-5.72205e-06, 0.5)
-scale = Vector2(2.4, 1.75)
+position = Vector2(-36, -9)
+rect = Rect2(0, 0, 71, 20)
 
 [connection signal="screen_exited" from="Notificador" to="." method="_on_notificador_screen_exited"]

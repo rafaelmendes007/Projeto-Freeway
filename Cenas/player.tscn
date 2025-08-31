@@ -1,61 +1,97 @@
-[gd_scene load_steps=11 format=3 uid="uid://cal7i6ovtnsbr"]
+[gd_scene load_steps=17 format=3 uid="uid://cal7i6ovtnsbr"]
 
 [ext_resource type="Script" uid="uid://cy4j6q6a5ddk8" path="res://Cenas/player.gd" id="1_e2nbm"]
-[ext_resource type="Texture2D" uid="uid://dyh0lcce502wk" path="res://Material Freeway/galinha/baixo/sprite_1.png" id="2_ybr15"]
-[ext_resource type="Texture2D" uid="uid://cd85tvw123s55" path="res://Material Freeway/galinha/baixo/sprite_0.png" id="3_4q8k4"]
-[ext_resource type="Texture2D" uid="uid://bn30ieb4t4jwf" path="res://Material Freeway/galinha/baixo/sprite_2.png" id="4_2enhl"]
-[ext_resource type="Texture2D" uid="uid://cbv4thmvsb05q" path="res://Material Freeway/galinha/cima/sprite_1.png" id="5_ruciq"]
-[ext_resource type="Texture2D" uid="uid://bq7pdnqyou85h" path="res://Material Freeway/galinha/cima/sprite_0.png" id="6_yk6xx"]
-[ext_resource type="Texture2D" uid="uid://dllqgjr0lroum" path="res://Material Freeway/galinha/cima/sprite_2.png" id="7_bb2x8"]
+[ext_resource type="Texture2D" uid="uid://ur5qfam68gd4" path="res://MyMaterialFreway/calangos/baixo/calango00.png" id="2_2enhl"]
+[ext_resource type="Texture2D" uid="uid://7mmh4xbledup" path="res://MyMaterialFreway/calangos/baixo/calango01.png" id="3_ruciq"]
+[ext_resource type="Texture2D" uid="uid://c3vkh3jd8a2jr" path="res://MyMaterialFreway/calangos/baixo/calango02.png" id="4_yk6xx"]
+[ext_resource type="Texture2D" uid="uid://dxqm831kkjpgo" path="res://MyMaterialFreway/calangos/baixo/calango10.png" id="5_60xba"]
+[ext_resource type="Texture2D" uid="uid://cxvogii2bxqst" path="res://MyMaterialFreway/calangos/baixo/calango12.png" id="5_bb2x8"]
+[ext_resource type="Texture2D" uid="uid://cusmbgbxicm73" path="res://MyMaterialFreway/calangos/baixo/calango11.png" id="6_2c22q"]
+[ext_resource type="Texture2D" uid="uid://c3w4qweft48i5" path="res://MyMaterialFreway/calangos/cima/calango00.png" id="6_60xba"]
+[ext_resource type="Texture2D" uid="uid://cdmatp05w3yyg" path="res://MyMaterialFreway/calangos/cima/calango01.png" id="7_2c22q"]
 [ext_resource type="AudioStream" uid="uid://bos46al7lei73" path="res://Material Freeway/sons/colide.wav" id="8_60xba"]
+[ext_resource type="Texture2D" uid="uid://ciia2jagbgfhd" path="res://MyMaterialFreway/calangos/cima/calango02.png" id="8_vlk8b"]
+[ext_resource type="Texture2D" uid="uid://c5m31n54lj8rq" path="res://MyMaterialFreway/calangos/cima/calango10.png" id="9_had87"]
+[ext_resource type="Texture2D" uid="uid://dgqpgkhr4xusa" path="res://MyMaterialFreway/calangos/cima/calango11.png" id="10_axwfv"]
+[ext_resource type="Texture2D" uid="uid://lqx4aatw311v" path="res://MyMaterialFreway/calangos/cima/calango12.png" id="11_8tubf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u1c27"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ybr15")
+"texture": ExtResource("2_2enhl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4q8k4")
+"texture": ExtResource("3_ruciq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_2enhl")
+"texture": ExtResource("4_yk6xx")
 }],
 "loop": true,
-"name": &"baixo",
+"name": &"baixo1",
 "speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_ruciq")
+"texture": ExtResource("5_60xba")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_yk6xx")
+"texture": ExtResource("6_2c22q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_bb2x8")
+"texture": ExtResource("5_bb2x8")
 }],
 "loop": true,
-"name": &"cima",
+"name": &"baixo2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_60xba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2c22q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vlk8b")
+}],
+"loop": true,
+"name": &"cima1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_had87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_axwfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8tubf")
+}],
+"loop": true,
+"name": &"cima2",
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_op7ga"]
-radius = 14.0357
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4yfx"]
+radius = 16.0
+height = 52.0
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_e2nbm")
 
 [node name="Animacao" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, -3)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_u1c27")
-animation = &"baixo"
+animation = &"baixo2"
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_op7ga")
+shape = SubResource("CapsuleShape2D_a4yfx")
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(4, 1)
 stream = ExtResource("8_60xba")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
